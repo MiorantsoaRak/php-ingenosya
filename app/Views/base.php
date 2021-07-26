@@ -15,9 +15,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
+<?php if(session('isLoggedIn')){ ?>
+    <nav class="navbar navbar-dark bg-primary navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="<?= base_url('/')?>">Accueil</a>
+            <div class="collapse navbar-collapse">
+                <!--<ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">l</a>
+                    </li>
+                </ul>-->
+                <a href="<?= base_url('auth/logout')?>" class="link-light">Se déconnecter</a>
+            </div>
+        </div>
+    </nav>
+<?php }?>
     <main role="main" class="container">
         <div class="row main-row justify-content-lg-center">
-            <div class="col-lg-8 rounded">
+            <div class="col-lg rounded">
                 <div class="row">
                     <?php $this->renderSection('main')?>
                 </div>
