@@ -33,11 +33,12 @@ class LinkController extends BaseController
             parse_str($parsed_url['query'], $params);
         }
 
+        $path = (isset($parsed_url['path'])) ? array_filter(explode('/', $parsed_url['path'])) : [];
         $link = [
             'original_link' => $this->request->getPost('link'),
             'scheme' => $parsed_url['scheme'] ?? "",
             'host' => $parsed_url['host'] ?? "",
-            'path' => json_encode(array_filter(explode('/',$parsed_url['path']))) ?? "",
+            'path' => json_encode($path),
             'params' => json_encode($params)
         ];
 
