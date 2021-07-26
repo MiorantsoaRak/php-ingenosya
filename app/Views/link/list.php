@@ -8,7 +8,7 @@
 <h1 class="mt-5 mb-4">Tableau des liens</h1>
 <?= view('App\Views\components\alerts') ?>
 <div class="table-responsive-sm">
-    <table class="table table-striped w-auto">
+    <table class="table table-bordered table-striped w-auto">
         <thead>
         <tr>
             <th scope="col">Scheme</th>
@@ -26,7 +26,7 @@
                 <td><?= $link['host']?></td>
                 <td><?= $link['path']?></td>
                 <td><?= $link['params']?></td>
-                <td><?= $link['original_link']?></td>
+                <td style="word-wrap: break-word;min-width: 160px;max-width: 500px;"><?= $link['original_link']?></td>
                 <td><a href="<?= base_url('link/delete/'.$link['id'])?>" class="btn btn-danger">Supprimer</a></td>
             </tr>
         <?php }?>
