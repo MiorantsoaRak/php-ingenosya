@@ -6,6 +6,7 @@
 
 <?php $this->section('main')?>
 <h1 class="mt-5 mb-4">Tableau des liens</h1>
+<?= view('App\Views\components\alerts') ?>
 <table class="table table-striped">
     <thead>
     <tr>
