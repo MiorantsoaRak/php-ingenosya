@@ -23,7 +23,7 @@ Download or clone the project into your local repository
 
 Then enter the project directory `cd php-ingenosya`
 
-Run `composer install` to intall all CodeIgniter dependencies.
+Run `composer install` to install all CodeIgniter dependencies.
 
 Create the database (here named: `links_utility`), and import the sql file `links_utility.sql` to the newly created database.
 

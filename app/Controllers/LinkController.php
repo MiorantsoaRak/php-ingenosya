@@ -35,9 +35,9 @@ class LinkController extends BaseController
 
         $link = [
             'original_link' => $this->request->getPost('link'),
-            'scheme' => $parsed_url['scheme'],
-            'host' => $parsed_url['host'],
-            'path' => $parsed_url['path'],
+            'scheme' => $parsed_url['scheme'] ?? "",
+            'host' => $parsed_url['host'] ?? "",
+            'path' => $parsed_url['path'] ?? "",
             'params' => json_encode($params)
         ];
 
