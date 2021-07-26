@@ -29,7 +29,7 @@ class LinkController extends BaseController
         $parsed_url = parse_url($this->request->getPost('link'));
 
         $params = [];
-        if ($parsed_url['query']) {
+        if (isset($parsed_url['query'])) {
             parse_str($parsed_url['query'], $params);
         }
 
