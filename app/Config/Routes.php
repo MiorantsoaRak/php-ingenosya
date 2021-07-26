@@ -45,6 +45,7 @@ $routes->group('auth', ['namespace'=>'App\Controllers'], function ($routes) {
 $routes->group('link', ['namespace' => 'App\Controllers', 'filter' => 'auth'], function ($routes) {
     $routes->get('/', 'LinkController::index');
     $routes->get('add', 'LinkController::add');
+    $routes->get('delete/(:num)', 'LinkController::delete/$1');
     $routes->post('save', 'LinkController::addLink');
 });
 

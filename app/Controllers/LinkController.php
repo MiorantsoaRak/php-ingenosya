@@ -52,5 +52,14 @@ class LinkController extends BaseController
         return view('link/add');
     }
 
+    public function delete($id)
+    {
+        $model = new LinksModel();
+
+        $model->delete($id);
+
+        return redirect()->back()->with('success', "Lien supprimé");
+    }
+
 
 }
