@@ -23,8 +23,8 @@ class LinkController extends BaseController
             'link' => 'required|min_length[8]',
         ];
 
-        if (!$this->validate($rules)) {
-            return redirect()->to('link/add')->with('error', $this->validator->listErrors());
+        if (!$this->validate($rules) || !filter_var($this->request->getPost('link'), FILTER_VALIDATE_URL)) {
+            return redirect()->to('link/add')->with('error', "URL non valide");
         }
         $parsed_url = parse_url($this->request->getPost('link'));
 
