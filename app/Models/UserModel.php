@@ -6,12 +6,16 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-	protected $table                = 'users';
+	protected $table                = 'user';
 	protected $primaryKey           = 'id';
-	protected $useAutoIncrement     = true;
-	protected $allowedFields        = [];
+
+	protected $allowedFields = [
+       'name', 'email', 'password'
+    ];
 
 	// Validation
-	protected $validationRules      = [];
+	protected $validationRules      = [
+		
+	];
 	protected $validationMessages   = [];
 }
