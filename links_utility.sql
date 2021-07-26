@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 26 juil. 2021 à 18:17
+-- Généré le : lun. 26 juil. 2021 à 19:19
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -33,19 +33,20 @@ CREATE TABLE IF NOT EXISTS `links` (
   `original_link` varchar(255) NOT NULL,
   `scheme` varchar(60) NOT NULL,
   `host` varchar(60) NOT NULL,
-  `path` varchar(100) NOT NULL,
+  `path` json NOT NULL,
   `params` json NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `links`
 --
 
 INSERT INTO `links` (`id`, `original_link`, `scheme`, `host`, `path`, `params`) VALUES
-(9, 'http://www.geeksforgeeks.org/register?name=Amit&email=amit1998@gmail.com', 'http', 'www.geeksforgeeks.org', '/register', '{\"name\": \"Amit\", \"email\": \"amit1998@gmail.com\"}'),
-(10, 'https://www.google.com/search?q=for+key+value+php&oq=for+key+va&aqs=edge.2.0j69i57j0i67j0l4.5146j0j1&sourceid=chrome&ie=UTF-8', 'https', 'www.google.com', '/search', '{\"q\": \"for key value php\", \"ie\": \"UTF-8\", \"oq\": \"for key va\", \"aqs\": \"edge.2.0j69i57j0i67j0l4.5146j0j1\", \"sourceid\": \"chrome\"}'),
-(11, 'https://www.facebook.com/pages/?category=your_pages&ref=bookmarks', 'https', 'www.facebook.com', '/pages/', '{\"ref\": \"bookmarks\", \"category\": \"your_pages\"}');
+(24, 'http://www.geeksforgeeks.org/register?name=Amit&email=amit1998@gmail.com', 'http', 'www.geeksforgeeks.org', '{\"1\": \"register\"}', '{\"name\": \"Amit\", \"email\": \"amit1998@gmail.com\"}'),
+(25, 'https://www.google.com/search?q=for+key+value+php&oq=for+key+va&aqs=edge.2.0j69i57j0i67j0l4.5146j0j1&sourceid=chrome&ie=UTF-8', 'https', 'www.google.com', '{\"1\": \"search\"}', '{\"q\": \"for key value php\", \"ie\": \"UTF-8\", \"oq\": \"for key va\", \"aqs\": \"edge.2.0j69i57j0i67j0l4.5146j0j1\", \"sourceid\": \"chrome\"}'),
+(26, 'https://www.facebook.com/pages/?category=your_pages&ref=bookmarks', 'https', 'www.facebook.com', '{\"1\": \"pages\"}', '{\"ref\": \"bookmarks\", \"category\": \"your_pages\"}'),
+(27, 'https://github.com/MiorantsoaRak/SyndicApp/settings/access', 'https', 'github.com', '{\"1\": \"MiorantsoaRak\", \"2\": \"SyndicApp\", \"3\": \"settings\", \"4\": \"access\"}', '[]');
 
 -- --------------------------------------------------------
 

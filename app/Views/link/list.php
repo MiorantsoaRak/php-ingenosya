@@ -10,7 +10,6 @@
 <table class="table table-striped">
     <thead>
     <tr>
-        <th>id</th>
         <th>Scheme</th>
         <th>Host</th>
         <th>Path</th>
@@ -21,7 +20,6 @@
     <tbody>
     <?php foreach ($links as $link) {?>
         <tr>
-            <td><?= $link['id']?></td>
             <td><?= $link['scheme']?></td>
             <td><?= $link['host']?></td>
             <td><?= $link['path']?></td>
@@ -32,6 +30,6 @@
     </tbody>
 </table>
 
-<a href="<?=base_url('link/add')?>" class="btn btn-primary w-auto px-5 mt-4">Ajouter un lien</a>
+<a href="<?=base_url('link/add')?>" class="btn btn-primary w-auto px-5 mt-4 mb-4">Ajouter un lien</a>
 <?php $this->endSection()?>
 

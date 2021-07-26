@@ -12,6 +12,6 @@
         <label for="link" class="form-label">Lien</label>
         <input type="text" class="form-control" placeholder="Renseigner le lien" name="link" id="link" required>
     </div>
-    <button class="btn btn-primary">Ajouter le lien</button>
+    <button class="btn btn-primary mb-5">Ajouter le lien</button>
 </form>
 <?php $this->endSection()?>
